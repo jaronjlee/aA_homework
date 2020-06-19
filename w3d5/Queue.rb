@@ -5,15 +5,15 @@ class Queue
     end
     
     def enqueue(el)
-        @queue.unshift(el)
+        @queue.push(el)
     end
 
     def dequeue
-        @queue.pop
+        @queue.shift
     end
 
     def peek
-        @queue[-1]
+        @queue.first
     end
     
 end

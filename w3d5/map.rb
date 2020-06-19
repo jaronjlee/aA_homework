@@ -1,36 +1,34 @@
 class Map
 
     def initalize
-        @map = Array.new() { Array.new(2) }
+        @result = []
     end
     
 
     def set(key, value)
-        return @map << [key, value] if @map.length < 1
-        @map.each do |subarray|
-            if subarray.first == key
-                subarray.pop
-                subarray.push(value)
-                return
-            end
+        pair_index = result.index { |pair| pair[0] = key }
+        if pair_index
+            @result[pair_index][1] = value
+        else
+            @result.push([key, value])
         end
-        @map << [key, value]
+        value
     end
 
     def get(key)
-        @map.each do |subarray|
+        @result.each do |subarray|
             return subarray.last if subarray.first == key
         end
     end
 
     def delete(key)
-        @map.each_with_index do |subarray, i|
-            @map.delete_at(i) if subarray.first == key
+        @result.each_with_index do |subarray, i|
+            @result.delete_at(i) if subarray.first == key
         end
     end
 
     def show
-        p @map
+        p @result
     end
     
 end
