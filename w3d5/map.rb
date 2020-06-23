@@ -4,9 +4,8 @@ class Map
         @result = []
     end
     
-
     def set(key, value)
-        pair_index = result.index { |pair| pair[0] = key }
+        pair_index = @result.index { |pair| pair[0] = key }
         if pair_index
             @result[pair_index][1] = value
         else
