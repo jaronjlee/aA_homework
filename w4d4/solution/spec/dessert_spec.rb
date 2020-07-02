@@ -2,7 +2,8 @@ require 'rspec'
 require 'dessert'
 
 =begin
-Instructions: implement all of the pending specs (the `it` statements without blocks)! Be sure to look over the solutions when you're done.
+Instructions: implement all of the pending specs (the `it` statements without blocks)! 
+Be sure to look over the solutions when you're done.
 =end
 
 describe Dessert do
